@@ -34,3 +34,55 @@ for name, contents in drinks.items():
 for name, contents in drinks.items():
     if 'vodka' in contents and not contents & {'cream','vermouth'}:
         print(name)
+
+bruss = drinks['black russian']
+wruss = drinks['white russian']
+
+drinks
+
+#集合演算の演算子
+
+a = {1, 2}
+b = {2, 3}
+
+#積集合
+a & b
+
+a.intersection(b)
+
+#和集合
+a | b
+
+a.union(b)
+
+#差集合
+a - b
+b - a
+
+a.difference(b)
+b.difference(a)
+
+#排他的OR(NOR)
+a ^ b
+
+a.symmetric_difference(b)
+
+#部分集合(片方の集合がもう片方の集合の部分集合になっているか？)
+#つまり、一方が一方のサブセットになっているかのCHECK
+
+bruss.issubset(wruss)
+
+bruss <= wruss
+
+#第一の集合が第二の集合の真部分集合になるためには、第二集合は第一の集合の
+#すべての要素に加えて別の要素をもっていなければならない。
+
+bruss < wruss
+
+#部分集合演算子のイメージ
+# <=  ←口の開いた方が大きいベン図:部分集合
+# <　:真部分集合
+
+#上位集合(スーパーセット)
+wruss.issuperset(bruss)
+wruss > bruss
