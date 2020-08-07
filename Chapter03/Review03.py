@@ -19,6 +19,9 @@ things[0].upper()
 #3-7
 things.pop()
 things
+#別解
+#things.remove("salmonella")
+#del things[2]
 
 #3-8
 surprise = ["Groucho","Chico","Harpo"]
@@ -50,7 +53,9 @@ set(e2f.keys())
 #3-15
 life = {
     'animals':{
-        'cat':['Henri','Grumpy','Lucy'],
+        'cat':[
+            'Henri','Grumpy','Lucy'
+            ],
         'octop':{},
         'emus':{},
     },
