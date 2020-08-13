@@ -26,3 +26,6 @@ for cell in cells:
     print(cell)
 
 #4.6.2辞書内括表記
+word = 'letter'
+letter_count = {text: word.count(text) for text in word}
+letter_count
