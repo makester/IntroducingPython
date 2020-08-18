@@ -37,6 +37,8 @@ def print_more(required1, required2, *args):
 
 print_more('cap', 'gloves', 'scarf', 'monocle', 'mustache wax')
 
+
+
 #4.5.4 **によるキーワード引数の辞書化
 #**で関数宣言時のキーワード引数を1個の辞書にまとめることができる
 def print_kwarg(**kwargs):
@@ -116,8 +118,3 @@ edit_story(stairs,enliven)
 #enliven部分をラムダで実装する
 
 edit_story(stairs, lambda word: word.capitalize() + '!!!!')
-
-
-
-
-
