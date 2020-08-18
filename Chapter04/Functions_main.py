@@ -36,3 +36,10 @@ def print_more(required1, required2, *args):
     print('All the rest:', args)
 
 print_more('cap', 'gloves', 'scarf', 'monocle', 'mustache wax')
+
+#4.5.4 **によるキーワード引数の辞書化
+#**で関数宣言時のキーワード引数を1個の辞書にまとめることができる
+def print_kwarg(**kwargs):
+    print('keyword argments:', kwargs)
+
+print_kwarg(winr='merlot', entree='mutton', dessert='macaroon')
