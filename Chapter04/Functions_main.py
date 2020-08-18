@@ -43,3 +43,14 @@ def print_kwarg(**kwargs):
     print('keyword argments:', kwargs)
 
 print_kwarg(winr='merlot', entree='mutton', dessert='macaroon')
+
+#4.7.6 docstring
+#関数本体の先頭に文字列を組み込みドキュメントをつけることができる
+#これを"docstring"と呼ぶ
+
+def echo(anything):
+    'echoは、与えられた引数を返す'
+    return anything
+
+#help()関数で呼び出しているのが関数のdocstring
+#整形前のdocstringsはprint(関数名.__doc__)で表示できる
