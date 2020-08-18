@@ -74,3 +74,50 @@ def run_with_positional_args(func, *args):
     return func(*args)
 
 run_with_positional_args(sum_args, 1, 2, 3, 4)
+
+#4.7.8関数内関数
+#関数を他の関数の中で定義できる
+#中の関数に別の値を与えて連続実行したりできる
+def knight(sayiing):
+    def inner(quote):
+        return "We are the knight who say: '%s'" % quote #quoteをstrにして%sの位置に代入
+    return inner(sayiing)
+
+knight('Ni!')
+
+#4.7.9クロージャ
+def knight2(saying):
+    def inner2():
+        return "We are the knight who say: '%s'" % saying #innnerがKnight2に与えた引数を覚えている
+    return inner2
+
+a = knight2('Duck')
+b = knight2('Hasenprefeer')
+
+type(a)
+type(b)
+
+a()
+b()
+
+#4.7.10 無名関数：ラムダ関数
+
+def edit_story(words, func):
+    for word in words:
+        print(func(word))
+
+stairs = ['thud', 'meow', 'thud', 'hiss']
+
+def enliven(word): #これをedit_storyのfuncにする
+    return word.capitalize() + '!'
+
+edit_story(stairs,enliven)
+
+#enliven部分をラムダで実装する
+
+edit_story(stairs, lambda word: word.capitalize() + '!!!!')
+
+
+
+
+
