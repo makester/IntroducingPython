@@ -54,3 +54,23 @@ def echo(anything):
 
 #help()関数で呼び出しているのが関数のdocstring
 #整形前のdocstringsはprint(関数名.__doc__)で表示できる
+
+#4.7.7一人前のオブジェクトとしての関数
+def answer():
+    print(42)
+
+def run_somethihg(func):
+    func()
+
+run_somethihg(answer)
+#answer()ではなく括弧なしanswerを渡した点に注目
+#Pythonは括弧のない関数を他のオブジェクトと同様に扱う
+type(run_somethihg)
+
+def sum_args(*args):
+    return sum(args)
+
+def run_with_positional_args(func, *args):
+    return func(*args)
+
+run_with_positional_args(sum_args, 1, 2, 3, 4)
