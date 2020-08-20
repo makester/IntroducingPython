@@ -6,13 +6,13 @@ def print_global():
 print('at the top level:', animal)
 print_global()
 
-#関数内でグローバル変数を更新するとエラーが起きることを確認
-def change_and_print_global():
-    print('inside change_and_print_global:', animal)
-    animal = 'wombat'
-    print('after the change:', animal)
+# #関数内でグローバル変数を更新するとエラーが起きることを確認
+# def change_and_print_global():
+#     print('inside change_and_print_global:', animal)
+#     animal = 'wombat'
+#     print('after the change:', animal)
 
-change_and_print_global()
+# change_and_print_global()
 
 #関数内の変数をグローバル名前空間では扱えないことの確認
 animal = 'fruitbat'
