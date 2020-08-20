@@ -37,10 +37,10 @@ animal
 
 #グローバル/ローカルの名前空間の内容を確認してみる
 animal = 'fruitsbat'
-def change_local():
+def change_local2():
     animal = 'wambat' #ローカル変数
     print('locals:', locals())
 
 animal
-change_local()
+change_local2()
 print('globals:', globals())
