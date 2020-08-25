@@ -34,3 +34,5 @@ while True:
         print('Bad index:', position)
     except Exception as other:
         print('Something else broke:', other)
+
+    #4.12独自例外の作成→クラスについて勉強した後
