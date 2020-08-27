@@ -34,3 +34,7 @@ while True:
         break
     start += 1
 #ここではelifを使っても上手くいく。4-1のエラーはなんだろう？
+
+#4-3
+for i in range(0,4):
+    print(i)
