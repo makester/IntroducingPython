@@ -38,3 +38,16 @@ while True:
 #4-3
 for i in range(0,4):
     print(i)
+
+#4-4
+even_list = [number for number in range(10) if number % 2 == 0]
+print(even_list)
+
+#4-5
+squares = {item:item*item for item in range(10)}
+squares
+
+#4-6
+odd = {num for num in range(10) if num % 2 != 0}
+print(odd)
+
