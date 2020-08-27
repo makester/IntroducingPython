@@ -20,3 +20,17 @@ else:
 # 上手く動くのだがファイルに記載する場合は上手く動かない
 # elif文のところをコメントアウトすると動く
 # elif文の部分にvscodeのこの機能を使った時の環境依存の何かがある？
+
+#4-2
+guess_me = 7
+start = 1
+while True:
+    if start < guess_me:
+        print('too low')
+    elif start == guess_me:
+        print('find it')
+    elif start > guess_me:
+        print('oops')
+        break
+    start += 1
+#ここではelifを使っても上手くいく。4-1のエラーはなんだろう？
