@@ -51,3 +51,6 @@ squares
 odd = {num for num in range(10) if num % 2 != 0}
 print(odd)
 
+#4-7
+for thing in ('Got %s' % number for number in range(10)):
+    print(thing)
