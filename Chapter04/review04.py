@@ -54,3 +54,20 @@ print(odd)
 #4-7
 for thing in ('Got %s' % number for number in range(10)):
     print(thing)
+
+#4-8(my first code)
+def good():
+    potter = ['Harry', 'Ron', 'Hermione']
+    return potter
+
+PotterOutPut = good()
+PotterOutPut
+#4-8(textcode)
+def good_text():
+    return ['Harry', 'Ron', 'Hermione']
+good_text()
+
+#4-9
+def get_odd():
+    odd_num = [ number for number in range(10) if number % 2 == 1 ]
+    return odd_num
