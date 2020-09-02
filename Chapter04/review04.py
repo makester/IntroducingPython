@@ -67,7 +67,52 @@ def good_text():
     return ['Harry', 'Ron', 'Hermione']
 good_text()
 
-#4-9
+#4-9(自分コード)
+
 def get_odd():
-    odd_num = [ number for number in range(10) if number % 2 == 1 ]
-    return odd_num
+    return (number for number in range(10) if number %2 ==1 )
+
+#4-9(テキストコード)
+#奇数を返すget_oddsというジェネレータ関数を定義しよう。
+#またforループを使って3番目の値を見つけて表示しよう
+
+def get_odds():
+    for number in range(1, 10, 2):
+        yield number
+
+for count, number in enumerate(get_odds(), 1):
+    if count == 3:
+        print("The third odd number is", number)
+        break
+
+#4-10(まったくわからない)
+#関数が呼び出された時にStart,終了したときにEndと表示するtestというデコレータ
+def test(func):
+    def new_func(*args, **kwargs):
+        print('start')
+        result = func(*args, **kwargs)
+        print('end')
+        return result
+    return new_func
+
+#デコレータは定義してShift + Enterではそのままは呼べない？←呼べない
+
+@test
+def greeting():
+    print("greetings,Erthling")
+
+greeting()
+
+#4-11(クラスを知らないのでもう一度)
+try:
+    num_list = [1, 2, 3]
+    num_list[4]
+except :
+    print('Caught an oops')
+
+#4-12(できなかった)
+title = ['Creature of Habit', 'Crewel Fate']
+plots = ['A nun into a monster', 'A haunted yarn shop']
+#ここからできない
+movies = dict(zip(title, plots))
+movies
