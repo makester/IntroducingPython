@@ -90,3 +90,43 @@ car.exclaim()
 #このコードの背後でPythonがやっているのは
 #1.carオブジェクトのクラス(Car)を探しだす。
 #2.Carクラスのexplain()メソッドにself引数(=carオブジェクト自体)を渡す
+
+#6.8 プロパティによる属性値の取得、設定
+
+# class Duck():
+#     def __init__(self, input_name):
+#         self.hidden_name = input_name
+#     def get_name(self):
+#         print('inside the getter')
+#         return self.hidden_name
+#     def set_name(self, input_name):
+#         print('inside the setter')
+#         self.hidden_name = input_name
+#     name = property(get_name, set_name)
+
+# fowl = Duck('Howard')
+# fowl.name
+#getter/setterというものがあるというところで今は我慢しておく
+#このgetter/setterを使いたいときは最後のproperty()関数を書かずに
+#デコレータを使って書くこともできる
+#あらかじめそれようデコレータがあるようで
+#@propery ←　getter
+#@name.setter ← setter
+#のようだ
+
+class Duck():
+    def __init__(self, input_name):
+        self.hidden_name = input_name
+    @property
+    def name(self):
+        print('inside the getter')
+        return self.hidden_name
+    @name.setter
+    def name(self, input_name):
+        print('inside the setter')
+        self.hidden_name = input_name
+
+fowl = Duck('Howard')
+fowl.name
+fowl.name = 'Donald'
+fowl.name
