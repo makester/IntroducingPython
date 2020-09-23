@@ -82,4 +82,4 @@ bob.email
 #     def __init__(self, name, email):
 #         self.name = name #superを使わない定義
 #         self.email = email
-test
+
