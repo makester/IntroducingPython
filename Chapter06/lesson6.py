@@ -83,3 +83,10 @@ bob.email
 #         self.name = name #superを使わない定義
 #         self.email = email
 
+#6.7 selfの自己弁護
+car = Car()
+car.exclaim()
+#I'm a Car1と出力される。
+#このコードの背後でPythonがやっているのは
+#1.carオブジェクトのクラス(Car)を探しだす。
+#2.Carクラスのexplain()メソッドにself引数(=carオブジェクト自体)を渡す
